@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a repair | Cadence Cycle Works</title>
+  <meta name="description" content="Book your bike repair online. Choose services, see your price, and pick a drop-off slot.">
+  <meta name="theme-color" content="#0e4a43">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("ccw.theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Cadence Cycle Works, home">
+        <img src="assets/logo.svg" alt="" width="34" height="34">
+        <span>Cadence Cycle Works</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html" aria-current="page">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="bar-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Dark mode"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5-.05-1-.15-1.5A6 6 0 0 1 13.5 3.15 9 9 0 0 0 12 3z"/></svg></button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path class="m-open" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/><path class="m-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Book a repair</h1>
+        <p class="lead">Choose your services and a drop-off time. You will see the price as you go, and nothing is charged until pick-up.</p>
+      </div>
+    </section>
+    <section class="section" aria-label="Booking form">
+      <div class="wrap book-grid">
+        <div>
+          <div id="confirm" class="confirm card" tabindex="-1" hidden>
+            <h2>Booking confirmed</h2>
+            <p>Your reference is <strong id="confirm-ref"></strong>. Bring it with your bike.</p>
+            <p id="confirm-detail"></p>
+            <button type="button" id="confirm-new" class="btn btn-ghost">Make another booking</button>
+          </div>
+          <form id="booking-form" class="card form" novalidate aria-labelledby="form-title">
+            <h2 id="form-title">Your details</h2>
+            <div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+            <div class="row">
+              <div class="field">
+                <label for="b-name">Full name</label>
+                <input id="b-name" name="name" type="text" autocomplete="name" required aria-describedby="b-name-err">
+                <p class="error" id="b-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="b-phone">Mobile number</label>
+                <input id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="0300 1234567" required aria-describedby="b-phone-hint b-phone-err">
+                <p class="hint" id="b-phone-hint">We text you when the bike is ready.</p>
+                <p class="error" id="b-phone-err"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="b-email">Email</label>
+              <input id="b-email" name="email" type="email" autocomplete="email" required aria-describedby="b-email-err">
+              <p class="error" id="b-email-err"></p>
+            </div>
+            <div class="field">
+              <label for="b-bike">Bike type</label>
+              <select id="b-bike" name="bike" required aria-describedby="b-bike-err"></select>
+              <p class="error" id="b-bike-err"></p>
+            </div>
+            <fieldset class="field" aria-describedby="b-services-err" id="b-services-set">
+              <legend>Services</legend>
+              <div id="b-services" class="checks"></div>
+              <p class="error" id="b-services-err"></p>
+            </fieldset>
+            <div class="field">
+              <label for="b-date">Drop-off date</label>
+              <input id="b-date" name="date" type="date" required aria-describedby="b-date-hint b-date-err">
+              <p class="hint" id="b-date-hint">Monday to Saturday, up to 60 days ahead.</p>
+              <p class="error" id="b-date-err"></p>
+            </div>
+            <fieldset class="field" aria-describedby="b-time-err" id="b-time-set">
+              <legend>Time slot</legend>
+              <div id="b-slots" class="slots"><p class="muted">Choose a date to see available times.</p></div>
+              <p class="error" id="b-time-err"></p>
+            </fieldset>
+            <div class="field">
+              <label for="b-notes">Notes for the mechanic <span class="muted">(optional)</span></label>
+              <textarea id="b-notes" name="notes" rows="3" maxlength="300" aria-describedby="b-notes-count"></textarea>
+              <p class="hint" id="b-notes-count">0 of 300 characters</p>
+            </div>
+            <div class="field">
+              <label class="check"><input id="b-consent" name="consent" type="checkbox" required aria-describedby="b-consent-err"><span>I agree to be contacted about this booking.</span></label>
+              <p class="error" id="b-consent-err"></p>
+            </div>
+            <button type="submit" class="btn btn-primary">Confirm booking</button>
+          </form>
+        </div>
+        <aside class="side" aria-label="Booking summary and saved bookings">
+          <section class="card summary" aria-labelledby="sum-title" aria-live="polite">
+            <h2 id="sum-title">Summary</h2>
+            <dl>
+              <div><dt>Bike</dt><dd id="s-bike">Not chosen</dd></div>
+              <div><dt>Services</dt><dd id="s-services">None yet</dd></div>
+              <div><dt>Drop-off</dt><dd id="s-when">Not chosen</dd></div>
+              <div class="total"><dt>Estimated labour</dt><dd id="s-total">$0</dd></div>
+            </dl>
+          </section>
+          <section class="card" aria-labelledby="my-title">
+            <h2 id="my-title">My bookings</h2>
+            <p id="my-empty" class="muted">Bookings made on this device appear here.</p>
+            <ul id="my-list" class="my-list"></ul>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-brand">Cadence Cycle Works</p>
+        <p class="muted">Repairs, tune-ups and bike fits for every kind of rider.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot-title">Opening hours</p>
+        <p class="muted">Mon to Sat, 9:00 to 18:00<br>Closed Sundays</p>
+      </div>
+    </div>
+    <div class="wrap foot-base"><p class="muted">&copy; <span id="year">2026</span> Cadence Cycle Works. A student project built for the Inovegen Internship.</p></div>
+  </footer>
+  <button id="to-top" class="to-top" type="button" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

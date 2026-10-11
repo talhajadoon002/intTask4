@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadence Cycle Works | Bike repair and tune-ups</title>
+  <meta name="description" content="Neighbourhood bike repair studio. Estimate your price, book a slot online, and get your bike back fast.">
+  <meta name="theme-color" content="#0e4a43">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("ccw.theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Cadence Cycle Works, home">
+        <img src="assets/logo.svg" alt="" width="34" height="34">
+        <span>Cadence Cycle Works</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="bar-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Dark mode"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5-.05-1-.15-1.5A6 6 0 0 1 13.5 3.15 9 9 0 0 0 12 3z"/></svg></button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path class="m-open" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/><path class="m-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Your bike, back on the road by tomorrow.</h1>
+          <p class="lead">Cadence is a neighbourhood repair studio. Choose what your bike needs, see the price before you book, then drop it off at a time that suits you.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="booking.html">Book a repair</a>
+            <a class="btn btn-ghost" href="services.html">Browse services</a>
+          </div>
+          <svg class="bike" viewBox="0 0 440 240" role="img" aria-label="Line drawing of a road bike on a workstand">
+  <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="110" cy="160" r="68"/><circle cx="330" cy="160" r="68"/>
+    <path d="M110 160L180 90 295 90 205 160 180 90M205 160L110 160M295 90L330 160M295 90L290 66 318 66M165 86h34"/>
+    <circle cx="205" cy="160" r="14" stroke="var(--accent-line)"/>
+  </g>
+  <path d="M40 228h360" stroke="var(--accent-line)" stroke-width="6" stroke-linecap="round"/>
+</svg>
+        </div>
+        <form class="estimator card" id="estimator" aria-labelledby="est-title" novalidate>
+          <h2 id="est-title">Price estimator</h2>
+          <div class="field">
+            <label for="est-bike">Bike type</label>
+            <select id="est-bike" name="bike"></select>
+          </div>
+          <fieldset class="field">
+            <legend>What needs doing?</legend>
+            <div id="est-services" class="checks"></div>
+          </fieldset>
+          <div class="est-result" aria-live="polite" aria-atomic="true">
+            <p class="est-total"><strong id="est-total">$0</strong> <span class="muted">estimated labour</span></p>
+            <p id="est-time" class="muted">Select at least one service.</p>
+          </div>
+          <a id="est-book" class="btn btn-primary btn-block" href="booking.html" aria-disabled="true">Book these services</a>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="promise-title">
+      <div class="wrap">
+        <h2 id="promise-title" class="section-title">What you can count on</h2>
+        <ul class="promises">
+          <li><h3>Prices quoted first</h3><p>Labour is priced per job. If we find something extra, we call before touching it.</p></li>
+          <li><h3>Most jobs done in a day</h3><p>Tune-ups, brakes and gears are usually ready by the next afternoon.</p></li>
+          <li><h3>Work that stays fixed</h3><p>Every repair carries a 90-day workmanship guarantee. Come back and we redo it free.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="featured-title" class="section-title">Popular services</h2>
+          <a class="text-link" href="services.html">See all services</a>
+        </div>
+        <div id="featured" class="grid three"><noscript><p>Enable JavaScript to see our service list, or visit the <a href="services.html">services page</a>.</p></noscript></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-title">
+      <div class="wrap">
+        <h2 id="process-title" class="section-title">How a repair works</h2>
+        <ol class="steps">
+          <li><h3>Book online</h3><p>Pick your services and a drop-off slot. It takes about two minutes.</p></li>
+          <li><h3>Drop it off</h3><p>Bring the bike to the workshop. We note its condition with you.</p></li>
+          <li><h3>We diagnose</h3><p>A mechanic checks the bike and confirms the price with you.</p></li>
+          <li><h3>Ride away</h3><p>We text when it is ready. Pay at pick-up.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="quotes-title">
+      <div class="wrap narrow">
+        <h2 id="quotes-title" class="section-title">Rider notes</h2>
+        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="slides" aria-live="off">
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><blockquote><p>My commuter was skipping gears every morning. It came back shifting like new, and the quote matched the final bill exactly.</p></blockquote><figcaption>Areeba K., daily commuter</figcaption></figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3" hidden><blockquote><p>They rebuilt the fork on my mountain bike and explained what had worn out. I finally understand my own bike.</p></blockquote><figcaption>Hamza R., weekend trail rider</figcaption></figure>
+            <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3" hidden><blockquote><p>Booked at night, dropped off at nine, collected at five. My daughter's bike was safe and ready.</p></blockquote><figcaption>Sana M., parent</figcaption></figure>
+          </div>
+          <div class="carousel-ctl">
+            <button type="button" class="btn btn-ghost btn-sm" data-prev aria-label="Previous review">Previous</button>
+            <div class="dots" role="group" aria-label="Choose review"></div>
+            <button type="button" class="btn btn-ghost btn-sm" data-next aria-label="Next review">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="wrap narrow">
+        <h2 id="faq-title" class="section-title">Common questions</h2>
+        <div class="accordion" data-accordion>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1">Do I need an appointment?</button></h3>
+          <div id="faq-1" role="region" aria-labelledby="faq-b1" hidden><p>Walk-ins are welcome for puncture repairs. For everything else, booking a slot guarantees a mechanic is free when you arrive.</p></div>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2">Are parts included in the price?</button></h3>
+          <div id="faq-2" role="region" aria-labelledby="faq-b2" hidden><p>Listed prices cover labour. Parts such as tyres, cables or chains are quoted separately, and we only fit them once you approve.</p></div>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3">How long will my bike be here?</button></h3>
+          <div id="faq-3" role="region" aria-labelledby="faq-b3" hidden><p>Each service lists its usual turnaround. Combined jobs take as long as the longest one, so a tune-up with a wheel true is still about a day.</p></div>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4">Can I change or cancel a booking?</button></h3>
+          <div id="faq-4" role="region" aria-labelledby="faq-b4" hidden><p>Yes. Cancel from the My bookings list on the booking page, or send us a message on the contact page.</p></div>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Do you service e-bikes?</button></h3>
+          <div id="faq-5" role="region" aria-labelledby="faq-b5" hidden><p>We service mechanical parts and run a diagnostic on most hub and mid-drive systems. Battery repairs are sent to the manufacturer.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap cta-inner">
+        <h2 id="cta-title">Ready when your bike is.</h2>
+        <a class="btn btn-accent" href="booking.html">Book a repair</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-brand">Cadence Cycle Works</p>
+        <p class="muted">Repairs, tune-ups and bike fits for every kind of rider.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot-title">Opening hours</p>
+        <p class="muted">Mon to Sat, 9:00 to 18:00<br>Closed Sundays</p>
+      </div>
+    </div>
+    <div class="wrap foot-base"><p class="muted">&copy; <span id="year">2026</span> Cadence Cycle Works. A student project built for the Inovegen Internship.</p></div>
+  </footer>
+  <button id="to-top" class="to-top" type="button" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/estimator.js"></script>
+  <script src="js/services-preview.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services and prices | Cadence Cycle Works</title>
+  <meta name="description" content="Browse every bike repair service with labour prices and turnaround times.">
+  <meta name="theme-color" content="#0e4a43">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("ccw.theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Cadence Cycle Works, home">
+        <img src="assets/logo.svg" alt="" width="34" height="34">
+        <span>Cadence Cycle Works</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="booking.html">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="bar-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Dark mode"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5-.05-1-.15-1.5A6 6 0 0 1 13.5 3.15 9 9 0 0 0 12 3z"/></svg></button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path class="m-open" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/><path class="m-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Services and prices</h1>
+        <p class="lead">Labour prices for a standard bike. E-bikes cost a little more, kids' bikes a little less. The estimator and booking form apply this for you.</p>
+      </div>
+    </section>
+    <section class="section" aria-label="Service list">
+      <div class="wrap">
+        <form class="toolbar" id="toolbar" role="search" aria-label="Filter services" novalidate>
+          <div class="field grow">
+            <label for="svc-search">Search services</label>
+            <input id="svc-search" type="search" placeholder="Try &quot;brake&quot; or &quot;wheel&quot;" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="svc-sort">Sort by</label>
+            <select id="svc-sort">
+              <option value="name">Name</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+              <option value="days">Fastest first</option>
+            </select>
+          </div>
+        </form>
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+        <p id="svc-status" class="muted status" role="status"></p>
+        <div id="svc-grid" class="grid three"><noscript><p>Please enable JavaScript to browse the service list.</p></noscript></div>
+        <div id="svc-empty" class="empty" hidden>
+          <h2>No services match</h2>
+          <p>Try a different word, or clear the filters to see everything.</p>
+          <button id="svc-reset" type="button" class="btn btn-ghost">Clear filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-brand">Cadence Cycle Works</p>
+        <p class="muted">Repairs, tune-ups and bike fits for every kind of rider.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book a repair</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot-title">Opening hours</p>
+        <p class="muted">Mon to Sat, 9:00 to 18:00<br>Closed Sundays</p>
+      </div>
+    </div>
+    <div class="wrap foot-base"><p class="muted">&copy; <span id="year">2026</span> Cadence Cycle Works. A student project built for the Inovegen Internship.</p></div>
+  </footer>
+  <button id="to-top" class="to-top" type="button" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
